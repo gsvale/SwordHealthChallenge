@@ -1,0 +1,178 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.swordhealthchallenge.viewModels.DetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:productImage="@{viewModel.image}"
+                    android:adjustViewBounds="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6.5"
+                android:weightSum="4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Name"
+                        android:text="@{viewModel.name}"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="normal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Group:"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Group"
+                        android:text="@{viewModel.group}"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="normal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Origin:"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Origin"
+                        android:text="@{viewModel.origin}"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="normal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Temperament:"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Temperament"
+                        android:text="@{viewModel.temperament}"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="25sp"
+                        android:textStyle="normal"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
